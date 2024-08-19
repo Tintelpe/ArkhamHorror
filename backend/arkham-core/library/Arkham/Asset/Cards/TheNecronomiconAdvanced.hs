@@ -33,7 +33,7 @@ instance RunMessage TheNecronomiconAdvanced where
       pure a
     UseThisAbility iid (isSource attrs -> True) 1 -> do
       let source = attrs.ability 1
-      push $ assignDamage iid source 1
+      push $ assignHorror iid source 1
       if assetHorror attrs <= 1
         then do
           push $ toDiscardBy iid source attrs
